@@ -26,13 +26,14 @@ namespace WeatherAPI.Controllers
             return openWeatherMap;
         }
 
+        [HttpGet("/weather")]
         public IActionResult Index()
         {
             OpenWeatherMap openWeatherMap = FillCity();
             return View(openWeatherMap);
         }
 
-        [HttpPost("weather")]
+        [HttpPost]
         public IActionResult Index(OpenWeatherMap openWeatherMap, string cities)
         {
             openWeatherMap = FillCity();

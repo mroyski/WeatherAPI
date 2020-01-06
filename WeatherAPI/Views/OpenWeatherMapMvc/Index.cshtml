@@ -1,16 +1,8 @@
 ﻿@model WeatherAPI.Models.OpenWeatherMap
 
-@{
-    Layout = null;
+@foreach (var city in Model.cities)
+{
+    <div>
+        @city.Key 
+    </div>
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-</body>
-</html>
