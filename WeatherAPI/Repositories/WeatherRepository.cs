@@ -1,11 +1,6 @@
-﻿using Microsoft.VisualBasic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using WeatherAPI.Class;
 
 namespace WeatherAPI.Repositories
@@ -14,7 +9,7 @@ namespace WeatherAPI.Repositories
     {
         WeatherResponse IWeatherRepository.GetForecast(string city)
         {
-            string IDOWeather = Constants.OPEN_WEATHER_APPID;
+            string IDOWeather = Config.Constants.OPEN_WEATHER_APPID;
             // Connection String
             var client = new RestClient($"http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&APPID={IDOWeather}");
             var request = new RestRequest(Method.GET);
