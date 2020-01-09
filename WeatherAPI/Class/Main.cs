@@ -2,10 +2,10 @@
 {
     public class Main
     {
-        public double temp { get; set; }
-        public int pressure { get; set; }
-        public int humidity { get; set; }
-        public int temp_min { get; set; }
-        public int temp_max { get; set; }
+        public double Temp { get; set; }
+        public int Pressure { get; set; }
+        public int Humidity { get; set; }
+        public int Temp_Min { get; set; }
+        public int Temp_Max { get; set; }
     }
 }
